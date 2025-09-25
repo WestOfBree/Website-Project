@@ -7,6 +7,7 @@
     <title>Bilbo's Library</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/bb4761e2f4.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 </head>
 
 <body>
@@ -16,9 +17,19 @@
                 <img src="./assets/Library.svg" alt="Library-Logo" class="nav__logo">
                 <ul class="nav__links">
                     <li><a href="#" class="nav__link">Home</a></li>
-                    <li><a href="#" class="nav__link">Contact</a></li>
-                    <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
+                    <li><a href="" class="nav__link">Contact</a></li>
+                    <li><a href="#featured" class="nav__link nav__link--primary">Books</a></li>
                 </ul>
+
+                <button class="menu" onclick="openMenu()"> <i class="fa-solid fa-bars"></i></button>
+                <div class="menu__backdrop">
+                    <button class="menu--close" onclick="closeMenu()"> <i class="fa-solid fa-times"></i></button>
+                    <ul class="menu__link">
+                        <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Home</a></li>
+                        <li class="menu__list"><a href="#featured" class="menu__link" onclick="closeMenu()">Books</a></li>
+                        <li class="menu__list"><a href="" class="menu__link no-cursor" onclick="closeMenu()">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <header>
@@ -28,7 +39,7 @@
                     <h2 class="header__sub-title">Your gateway to a world of <span class="colored-text">books</span> and
                         <span class="colored-text">knowledge</span>.
                     </h2>
-                    <button class="header__button">Browse Books</button>
+                    <a href="#featured"><button class="header__button">Browse Books</button></a>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="./assets/Undraw_reading.svg" alt="" class="header__img">
@@ -65,7 +76,7 @@
             </div>
         </section>
 
-        <section id="features">
+        <section id="featured">
             <div class="container">
                 <div class="row">
                     <h2 class="section__title"> Featured <span class="colored-text">Books</span></h2>
@@ -131,7 +142,8 @@
                         <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
-                                    src="https://d29xot63vimef3.cloudfront.net/image/jrr-tolkien-books/20-2.jpg" alt="">
+                                    src="https://books.google.com/books/publisher/content?id=8roxEAAAQBAJ&pg=PA1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2D0BFtT0bdQh8MOgcvx03c-vdV1Q&w=1280"
+                                    alt="">
                             </figure>
                             <div class="book__title">
                                 The Return Of The Shadow
@@ -160,10 +172,11 @@
                         <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
-                                    src="https://d29xot63vimef3.cloudfront.net/image/jrr-tolkien-books/7-8.jpg" alt="">
+                                    src="https://books.google.com/books/publisher/content?id=bPJUDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0qvu51fRC2kI6AoDatIj76Hgoltw&w=1280"
+                                    alt="">
                             </figure>
                             <div class="book__title">
-                                The Silmarillion
+                                The Fall Of Gondolin
                             </div>
                             <div class="book__rating">
                                 <i class="fa-solid fa-star"></i>
@@ -176,13 +189,14 @@
                                 $19.12
                             </div>
                         </div>
-                          <div class="book">
+                        <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
-                                    src="https://d29xot63vimef3.cloudfront.net/image/jrr-tolkien-books/7-8.jpg" alt="">
+                                    src="https://books.google.com/books/publisher/content?id=N_zzEAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2WJzEhacc2biRxx7J4YJRzeN_FSA&w=1280"
+                                    alt="">
                             </figure>
                             <div class="book__title">
-                                The Silmarillion
+                                The Adventures Of Tom Bombadil
                             </div>
                             <div class="book__rating">
                                 <i class="fa-solid fa-star"></i>
@@ -195,13 +209,14 @@
                                 $19.12
                             </div>
                         </div>
-                          <div class="book">
+                        <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
-                                    src="https://d29xot63vimef3.cloudfront.net/image/jrr-tolkien-books/7-8.jpg" alt="">
+                                    src="https://books.google.com/books/publisher/content?id=r4pODQAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U225A5QYCr9TYzPX1UutMtoEoWDmg&w=1280"
+                                    alt="">
                             </figure>
                             <div class="book__title">
-                                The Silmarillion
+                                Beren and Lúthien
                             </div>
                             <div class="book__rating">
                                 <i class="fa-solid fa-star"></i>
@@ -214,13 +229,14 @@
                                 $19.12
                             </div>
                         </div>
-                          <div class="book">
+                        <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
-                                    src="https://d29xot63vimef3.cloudfront.net/image/jrr-tolkien-books/7-8.jpg" alt="">
+                                    src="https://books.google.com/books/content?id=12e8PJ2T7sQC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0ZGpeqk2ed84chNpEKaNMLirIacg&w=1280"
+                                    alt="">
                             </figure>
                             <div class="book__title">
-                                The Silmarillion
+                                The Two Towers
                             </div>
                             <div class="book__rating">
                                 <i class="fa-solid fa-star"></i>
@@ -233,13 +249,14 @@
                                 $19.12
                             </div>
                         </div>
-                          <div class="book">
+                        <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
-                                    src="https://d29xot63vimef3.cloudfront.net/image/jrr-tolkien-books/7-8.jpg" alt="">
+                                    src="https://books.google.com/books/publisher/content?id=pxY_EAAAQBAJ&pg=PA2&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U20kIc5TbW8LkukEdkoQZJ5TEuxPQ&w=1280"
+                                    alt="">
                             </figure>
                             <div class="book__title">
-                                The Silmarillion
+                                Tree and Leaf: Including Mythopoeia
                             </div>
                             <div class="book__rating">
                                 <i class="fa-solid fa-star"></i>
@@ -252,13 +269,14 @@
                                 $19.12
                             </div>
                         </div>
-                          <div class="book">
+                        <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
-                                    src="https://d29xot63vimef3.cloudfront.net/image/jrr-tolkien-books/7-8.jpg" alt="">
+                                    src="https://books.google.com/books/publisher/content?id=owZwEAAAQBAJ&pg=PA1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3qbHYs9_CEtd6MN4Haqxy4Evkk2w&w=1280"
+                                    alt="">
                             </figure>
                             <div class="book__title">
-                                The Silmarillion
+                                The Fall of Númenor
                             </div>
                             <div class="book__rating">
                                 <i class="fa-solid fa-star"></i>
@@ -271,13 +289,14 @@
                                 $19.12
                             </div>
                         </div>
-                          <div class="book">
+                        <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
-                                    src="https://d29xot63vimef3.cloudfront.net/image/jrr-tolkien-books/7-8.jpg" alt="">
+                                    src="https://books.google.com/books/publisher/content?id=2TEPAAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0noP7gFRFecrqgp07s2Y1eQV0RMg&w=1280"
+                                    alt="">
                             </figure>
                             <div class="book__title">
-                                The Silmarillion
+                                Roverandom
                             </div>
                             <div class="book__rating">
                                 <i class="fa-solid fa-star"></i>
@@ -290,13 +309,14 @@
                                 $19.12
                             </div>
                         </div>
-                          <div class="book">
+                        <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
-                                    src="https://d29xot63vimef3.cloudfront.net/image/jrr-tolkien-books/7-8.jpg" alt="">
+                                    src="https://books.google.com/books/publisher/content?id=IxD9EAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0MpRFTpxoB1ycOAmhp7ilqFkKGuw&w=1280"
+                                    alt="">
                             </figure>
                             <div class="book__title">
-                                The Silmarillion
+                                Farmer Giles of Ham
                             </div>
                             <div class="book__rating">
                                 <i class="fa-solid fa-star"></i>
@@ -313,32 +333,42 @@
                 </div>
             </div>
         </section>
+        <section id="explore">
+            <div class="container">
+                <div class="row">
+                    <div class="explore--wrapper">
+                        <h2 class="section__title"> Explore more <span class="colored-text">Books</span></h2>
+                        <button class="explore__button">Browse Books</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-        <footer>
+    <footer>
         <div class="row footer-row">
-            <a href="#"class="back-to-top">
+            <a href="#" class="back-to-top">
                 <figure class="footer__logo--container">
                     <img src="./assets/Library.svg" alt="logo" class="footer__logo">
                 </figure>
                 <span class="footer__logo--pop-up">Top<i class="fa-solid fa-arrow-up"></i></span>
             </a>
             <div class="footer__social--list">
-                <a href=""class="
-                footer__social--link
-                link__hover-effect
-                link__hover-effect--white" target="_blank">Home</a>
                 <a href="" class="
                 footer__social--link
                 link__hover-effect
-                link__hover-effect--white" target="_blank">About</a>
-                <a href="mailto:b.thomas1996@yahoo.com" class="
+                no-cursor" target="_blank">Home</a>
+                <a href="" class="
                 footer__social--link
                 link__hover-effect
-                link__hover-effect--white" target="_blank">Books</i></a>
-                <a href="./assets/Example Resume.pdf" class="
+                no-cursor" target="_blank">About</a>
+                <a href="" class="
                 footer__social--link
                 link__hover-effect
-                link__hover-effect--white" target="_blank">Contact</i></a>
+                no-cursor" target="_blank">Books</i></a>
+                <a href="" class="
+                footer__social--link
+                link__hover-effect
+                no-cursor" target="_blank">Contact</i></a>
             </div>
         </div>
     </footer>
