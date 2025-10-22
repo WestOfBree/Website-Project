@@ -49,7 +49,7 @@
     </section>
 
     <main>
-
+<!-- HIGHLIGHTS SECTION -->
         <section id="highlights">
             <div class="container">
                 <div class="row">
@@ -75,12 +75,12 @@
             </div>
             </div>
         </section>
-
+<!-- FEATURED SECTION -->
         <section id="featured">
             <div class="container">
                 <div class="row">
                     <h2 class="section__title"> Featured <span class="colored-text">Books</span></h2>
-                    <div class="books">
+                    <div class="books--featured">
                         <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
@@ -163,13 +163,21 @@
                 </div>
             </div>
         </section>
-
+<!-- ALL BOOKS SECTION  -->
         <section id="recent">
             <div class="recent__container--wrapper">
                 <div class="row">
-                    <h2 class="section__title"> Latest <span class="colored-text">Books</span></h2>
+                    <div class="books__header">
+                    <h2 class="section__title"> All <span class="colored-text">Books</span></h2>
+                    <select id="filter" onchange="filterBooks()">
+                        <option value="" disabled>Sort</option>
+                        <option value="lowToHigh">Price, Low to High</option>
+                        <option value="highToLow">Price, High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                    </div>
                     <div class="books">
-                        <div class="book">
+                        <!-- <div class="book">
                             <figure class="book__img--wrapper">
                                 <img class="book__img"
                                     src="https://books.google.com/books/publisher/content?id=bPJUDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0qvu51fRC2kI6AoDatIj76Hgoltw&w=1280"
@@ -328,7 +336,7 @@
                             <div class="book__price">
                                 $19.12
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

@@ -304,14 +304,15 @@ Highlights
 
 /* 
 
-Featured/Recents
+Featured/Recent
 
 */
 #featured {
   background-color: #f6f9ec;
   padding-top: 8vw;
 }
-.books{
+.books,
+.books--featured{
     display: flex;
     flex-wrap: wrap;
 }
@@ -352,6 +353,23 @@ cursor: not-allowed;
     padding-right: 6px;
 }
 
+.books__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+select{
+  background-color: #f6f9ec;
+  border-radius: 4px;
+  border: 1px solid #2a9709;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 200px;
+  outline: none;
+  height: 40px;
+  line-height: 40px;
+}
 /* 
 
 Explore
