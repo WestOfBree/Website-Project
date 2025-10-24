@@ -9,8 +9,8 @@
     <script src="https://kit.fontawesome.com/bb4761e2f4.js" crossorigin="anonymous"></script>
     <script src="./index.js"></script>
 </head>
-
-<body>
+<!-- LANDING PAGE SECTION -->
+<body id="books__body">
     <section id="landing">
         <nav>
             <div class="nav__container">
@@ -48,8 +48,8 @@
         </header>
     </section>
 
-    <main>
-<!-- HIGHLIGHTS SECTION -->
+    <!-- HIGHLIGHTS SECTION -->
+    <main id="books.main">
         <section id="highlights">
             <div class="container">
                 <div class="row">
@@ -163,184 +163,30 @@
                 </div>
             </div>
         </section>
+
 <!-- ALL BOOKS SECTION  -->
+
         <section id="recent">
             <div class="recent__container--wrapper">
                 <div class="row">
                     <div class="books__header">
                     <h2 class="section__title"> All <span class="colored-text">Books</span></h2>
-                    <select id="filter" onchange="filterBooks()">
-                        <option value="" disabled>Sort</option>
+                    <select class="filter" onchange="filterBooks(event)">
+                        <option value="" disabled selected>Sort</option>
                         <option value="lowToHigh">Price, Low to High</option>
                         <option value="highToLow">Price, High to Low</option>
                         <option value="rating">Rating</option>
                     </select>
                     </div>
                     <div class="books">
-                        <!-- <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img"
-                                    src="https://books.google.com/books/publisher/content?id=bPJUDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0qvu51fRC2kI6AoDatIj76Hgoltw&w=1280"
-                                    alt="">
-                            </figure>
-                            <div class="book__title">
-                                The Fall Of Gondolin
-                            </div>
-                            <div class="book__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="book__price">
-                                $19.12
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img"
-                                    src="https://books.google.com/books/publisher/content?id=N_zzEAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2WJzEhacc2biRxx7J4YJRzeN_FSA&w=1280"
-                                    alt="">
-                            </figure>
-                            <div class="book__title">
-                                The Adventures Of Tom Bombadil
-                            </div>
-                            <div class="book__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="book__price">
-                                $19.12
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img"
-                                    src="https://books.google.com/books/publisher/content?id=r4pODQAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U225A5QYCr9TYzPX1UutMtoEoWDmg&w=1280"
-                                    alt="">
-                            </figure>
-                            <div class="book__title">
-                                Beren and Lúthien
-                            </div>
-                            <div class="book__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="book__price">
-                                $19.12
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img"
-                                    src="https://books.google.com/books/content?id=12e8PJ2T7sQC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0ZGpeqk2ed84chNpEKaNMLirIacg&w=1280"
-                                    alt="">
-                            </figure>
-                            <div class="book__title">
-                                The Two Towers
-                            </div>
-                            <div class="book__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="book__price">
-                                $19.12
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img"
-                                    src="https://books.google.com/books/publisher/content?id=pxY_EAAAQBAJ&pg=PA2&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U20kIc5TbW8LkukEdkoQZJ5TEuxPQ&w=1280"
-                                    alt="">
-                            </figure>
-                            <div class="book__title">
-                                Tree and Leaf: Including Mythopoeia
-                            </div>
-                            <div class="book__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="book__price">
-                                $19.12
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img"
-                                    src="https://books.google.com/books/publisher/content?id=owZwEAAAQBAJ&pg=PA1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3qbHYs9_CEtd6MN4Haqxy4Evkk2w&w=1280"
-                                    alt="">
-                            </figure>
-                            <div class="book__title">
-                                The Fall of Númenor
-                            </div>
-                            <div class="book__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="book__price">
-                                $19.12
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img"
-                                    src="https://books.google.com/books/publisher/content?id=2TEPAAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0noP7gFRFecrqgp07s2Y1eQV0RMg&w=1280"
-                                    alt="">
-                            </figure>
-                            <div class="book__title">
-                                Roverandom
-                            </div>
-                            <div class="book__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="book__price">
-                                $19.12
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img"
-                                    src="https://books.google.com/books/publisher/content?id=IxD9EAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0MpRFTpxoB1ycOAmhp7ilqFkKGuw&w=1280"
-                                    alt="">
-                            </figure>
-                            <div class="book__title">
-                                Farmer Giles of Ham
-                            </div>
-                            <div class="book__rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="book__price">
-                                $19.12
-                            </div>
-                        </div> -->
+
                     </div>
                 </div>
             </div>
         </section>
+       
+        <!-- EXPLORE SECTION  -->
+         
         <section id="explore">
             <div class="container">
                 <div class="row">
@@ -352,6 +198,9 @@
             </div>
         </section>
     </main>
+
+ <!-- FOOTER SECTION  -->   
+
     <footer>
         <div class="row footer-row">
             <a href="#" class="back-to-top">
