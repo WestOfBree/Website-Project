@@ -433,6 +433,32 @@ footer{
 
 /*
 
+LOADING SCREEN STYLE
+
+*/
+.books__loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+.fa-ring{
+  margin: 72px;
+  font-size: 32px;
+  animation: rotate 1000ms infinite linear;
+  color: #fabf2a;
+}
+@keyframes rotate {
+  0%{
+    transform: rotate(0);
+  }
+   100%{
+    transform: rotate(360deg);
+  }
+}
+/*
+
 Media Queries
 
 */
@@ -476,4 +502,4 @@ Media Queries
     margin-bottom: 24px;
   }
 }
-/* left off on 52:33
+
